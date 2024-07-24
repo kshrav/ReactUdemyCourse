@@ -1,6 +1,7 @@
 // conditional control structures
 
-const password = prompt("Enter your password: ");
+// const password = prompt("Enter your password: ");
+const password = "hello"
 
 if(password === "hello"){
     console.log("Correct password");
@@ -32,7 +33,7 @@ switch(num){
     }
 }
 
-// for of loop
+// for loop
 const hobbies = ["Reading", "Writing", "Coding", "Singing"];
 
 hobbies.forEach((hobby) => {

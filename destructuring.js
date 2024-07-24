@@ -5,7 +5,7 @@ console.log("********Destructuring assignment*******");
 const arrayList = ["Shravya", 24];
 console.log(arrayList[0], arrayList[1]);
 
-const [fullName, age] = ["Shravya", 24];
+const [fullName, age] = arrayList;
 console.log("fullname :", fullName, "age :",age);
 
 //object destructuring
