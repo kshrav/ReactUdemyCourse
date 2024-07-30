@@ -1,0 +1,11 @@
+.container{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.cls-h1{
+    color: blueviolet;
+    
+}
