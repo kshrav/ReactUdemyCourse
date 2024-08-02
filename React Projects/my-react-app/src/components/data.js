@@ -1,4 +1,4 @@
-import logo from "../logo.svg";
+import logo from '../logo.svg';
 
 export const data = [ 
 
@@ -8,12 +8,12 @@ export const data = [
         description : "This is react course to become frontend dveloper"
     },
     {
-        img : {logo},
+        image : {logo},
         title : " JavaScript",
         description : "This is Javascript course to become frontend dveloper"
     },
     {
-        img : {logo},
+        image : {logo},
         title : " HTML",
         description : "This is HTML course to become frontend dveloper"
     }

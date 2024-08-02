@@ -1,16 +1,17 @@
 import React from 'react'
 import './TabButton.css'
-function TabButton({label, children, onSelect}) {
+function TabButton({label, children, onSelect, isSelected}) {
 
-  function handleOnClick(){
-    console.log("Button clicked");
-  } // Inner function
+  // function handleOnClick(){
+  //   console.log("Button clicked");
+  // } // Inner function
 
   return (
     <div>
       <li>
         {/* <button onClick = {handleOnClick}>We can use inner functions without parantheses */}
-        <button onClick ={onSelect}>
+        <button className = {isSelected ? 'button' : ''}
+        onClick ={onSelect}>
             {label} 
             {children}
             {/* {children} */}

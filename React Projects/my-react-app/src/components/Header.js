@@ -1,4 +1,5 @@
 import logo from "../logo.svg"
+
 const reactDescription = ["Fundamental", "Crucial", "Core"];
 
 export function getRandomInt(max) {
@@ -9,7 +10,7 @@ export default function Header() {
   const description = reactDescription[getRandomInt(2)];
   return (
     <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
+      <img src = {logo} className="App-logo" alt="logo" />
       <h1> React Essentials </h1>
       <p>
         React is the {description} Library for web and native User Interface

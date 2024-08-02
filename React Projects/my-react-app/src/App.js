@@ -8,6 +8,7 @@ import Header from "./components/Header.js";
 import { data } from "./components/data.js";
 import TabButton from "./components/TabButton.js";
 import { EXAMPLE } from "./components/data.js";
+import AllFiles from './coding_Exercises/AllFiles.js';
 
 function App() {
   // let tabContent = "Please click on any button";
@@ -43,30 +44,33 @@ function App() {
             <section id="core-concepts">
               <ul>
                 <FileTwo
-                  className="App-logo1"
+                  cls="App-logo1"
                   title="React"
                   description="This is first react component app"
-                  img={logo}
+                  img = {logo}
                 />
                 <FileTwo
                   // Static way of assigning value to the attributes
-                  className="App-logo1"
+                  cls="App-logo1"
                   title="React"
                   description="This is second react component"
                   img={logo} //Dynamic value of img
-                />
+                  />
                 {/* Accesing with array index */}
                 <FileTwo
-                  className="App-logo1"
+                  cls="App-logo1"
                   title={data[0].title}
                   description={data[0].description}
-                  img={data[0].image}
-                />
+                  img={logo}
+                  />
                 {/* Using Spread operator */}
-                <FileTwo className="App-logo1" {...data[1]} />
+                <FileTwo cls="App-logo1" {...data[1]} />
 
                 {/* Component Using Destructuring */}
-                <CoreConceptProps className="App-logo1" {...data[2]} />
+                {/* Outputting List Data Dynamically */}
+                {data.map((content) => (
+                  <CoreConceptProps key = {content.title} cls="App-logo1" {...content} />
+                ))}
               </ul>
             </section>
           </main>
@@ -76,34 +80,42 @@ function App() {
         <section>
           <main>
             <ul>
+              
               <TabButton
-                className="button"
                 onClick={() => handleOnSelect("Button")}
                 label="Button1"
-              ></TabButton>
+                ></TabButton>
               {/* <TabButton>Button</TabButton> */}
               {/* <TabButton onSelect = {handleOnSelect}> */}
-              <TabButton onSelect={() => handleOnSelect("Components")}>
+                
+                <TabButton  
+                isSelected = {buttonContent === "Components" }
+                onSelect={() => handleOnSelect("Components")}>
                 Components
               </TabButton>
               {/* <TabButton onSelect = {handleOnSelect}> */}
-              <TabButton onSelect={() => handleOnSelect("JSX")}>JSX</TabButton>
-              <TabButton onSelect={() => handleOnSelect("Props")}>
+              <TabButton 
+                isSelected = {buttonContent === "JSX" }
+                onSelect={() => handleOnSelect("JSX")}>JSX</TabButton>
+              <TabButton 
+                isSelected = {buttonContent === "Props" }
+                onSelect={() => handleOnSelect("Props")}>
                 Props
               </TabButton>
               <TabButton
+                isSelected = {buttonContent === "States" }
                 onSelect={() => handleOnSelect("States")}
                 label="States"
-              />
+                />
             </ul>
           </main>
-{/* 
+        {/* 
           {!buttonContent ? (
             <p>Please select any button</p>
           ) : (
             <div>
-              <h1>{EXAMPLE[buttonContent].title}</h1>
-              <p>{EXAMPLE[buttonContent].description}</p>
+            <h1>{EXAMPLE[buttonContent].title}</h1>
+            <p>{EXAMPLE[buttonContent].description}</p>
               <pre>
                 <code>{EXAMPLE[buttonContent].code}</code>
               </pre>
@@ -111,6 +123,9 @@ function App() {
           )} */}
           {tabContent}
         </section>
+      </div>
+      <div>
+        <AllFiles/>
       </div>
     </div>
   );
