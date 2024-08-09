@@ -1,4 +1,4 @@
-import logo from "../logo.svg"
+import logo from "../../logo.svg"
 
 const reactDescription = ["Fundamental", "Crucial", "Core"];
 

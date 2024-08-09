@@ -1,24 +1,21 @@
 import React from 'react'
 import './TabButton.css'
-function TabButton({label, children, onSelect, isSelected}) {
+function TabButton({label, children, isSelected, ...props}) {
 
   // function handleOnClick(){
   //   console.log("Button clicked");
   // } // Inner function
 
   return (
-    <div>
-      <li>
+    <ul>
         {/* <button onClick = {handleOnClick}>We can use inner functions without parantheses */}
         <button className = {isSelected ? 'button' : ''}
-        onClick ={onSelect}>
+        {...props}>
             {label} 
             {children}
-            {/* {children} */}
             {/* we are accessing instead of using props.label, props.children*/}
         </button>
-      </li>
-    </div>
+      </ul>
   )
 }
 

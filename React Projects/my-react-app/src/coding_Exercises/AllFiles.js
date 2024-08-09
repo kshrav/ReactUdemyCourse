@@ -12,7 +12,6 @@ import {combine} from './WorkingWithFunctions';
 import WorkingWithProps from './WorkingWithProps';
 import WorkingWithState from './WorkingWithState';
 
-
 function AllFiles() {
     let result = combine(10, 5, 2);
     console.log(result);
@@ -32,8 +31,6 @@ function AllFiles() {
         <WorkingWithState/>
         {/* {transformToObjects(aar)}
         {result} */}
-
-
     </div>
   )
 }

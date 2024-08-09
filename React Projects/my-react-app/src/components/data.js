@@ -1,20 +1,26 @@
-import logo from '../logo.svg';
+import logo from "../logo.svg"
 
-export const data = [ 
+
+export const CORE_CONCEPTS = [ 
 
     {
         image : {logo},
-        title : " React",
-        description : "This is react course to become frontend dveloper"
-    },
-    {
-        image : {logo},
-        title : " JavaScript",
+        title : "Components",
         description : "This is Javascript course to become frontend dveloper"
     },
     {
         image : {logo},
-        title : " HTML",
+        title : " JSX",
+        description : "This is HTML course to become frontend dveloper"
+    },
+    {
+        image : {logo},
+        title : " Props",
+        description : "This is HTML course to become frontend dveloper"
+    },
+    {
+        image : {logo},
+        title : " States",
         description : "This is HTML course to become frontend dveloper"
     }
 

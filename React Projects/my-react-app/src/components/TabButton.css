@@ -1,13 +1,4 @@
 .button{
-    /* display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-content: center; */
-    /* display: flex; both ways are same */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* margin: 5px;
-    padding: 5px; */
-    background-color: whitesmoke;
-    color: rgb(33, 10, 54);
+    background-color: rgb(69, 24, 127);
+    color: rgb(244, 242, 245);
 }
